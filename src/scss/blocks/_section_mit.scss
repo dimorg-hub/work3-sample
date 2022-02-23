@@ -1,0 +1,53 @@
+.section_mit__inner {
+	display: flex;
+
+	@include bp ($point_5) {
+		flex-wrap: wrap;
+		flex: 1 0 50%;
+	}
+}
+
+.section_mit__item {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	flex: 1 1 33.333%;
+	min-height: 48rem;
+	padding-bottom: 2.8rem;
+	flex-wrap: wrap;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@include bp ($point_3) {
+		min-height: 30rem;
+	}
+
+	@include bp ($point_5) {
+		flex: 1 0 50%;
+	}
+
+	@include bp ($point_6) {
+		flex: 1 0 100%;
+		min-height: 25rem;
+	}
+}
+
+.section_mit__about {
+	font-size: 2rem;
+	color: #fff;
+
+}
+
+.section_mit__item_mod--1 {
+	background-image: url(../images/mit_1.jpg);
+}
+
+.section_mit__item_mod--2 {
+	background-image: url(../images/mit_2.jpg);
+}
+
+.section_mit__item_mod--3 {
+	background-image: url(../images/mit_3.jpg);
+}

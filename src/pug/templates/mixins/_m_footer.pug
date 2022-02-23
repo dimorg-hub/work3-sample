@@ -1,0 +1,54 @@
+mixin items(array)
+	.footer__inner 
+		each item in array.list
+			a.footer__link(href="#") 
+				+picture({
+					typeJpeg: false,
+					png: true,
+					media: 1024,
+					is2x: false,
+					contain: false,
+					class: `${array.gl_class}__img`,
+					img: item.img,
+					img_mob: item.img_mob
+				})
+
+mixin footer
+	footer.footer
+		+items({
+			gl_class: 'footer',
+			list: [
+				{
+			img: `icons/footer/1`,
+			img_mob: `icons/footer/1`
+				},
+				{
+			img: `icons/footer/2`,
+			img_mob: `icons/footer/2`
+				},
+				{
+			img: `icons/footer/3`,
+			img_mob: `icons/footer/3`
+				},
+				{
+			img: `icons/footer/4`,
+			img_mob: `icons/footer/4`
+				},
+				{
+			img: `icons/footer/5`,
+			img_mob: `icons/footer/5`
+				},
+				{
+			img: `icons/footer/1`,
+			img_mob: `icons/footer/1`
+				},
+				{
+			img: `icons/footer/2`,
+			img_mob: `icons/footer/2`
+				},
+				{
+			img: `icons/footer/3`,
+			img_mob: `icons/footer/3`
+				},
+			]
+		})

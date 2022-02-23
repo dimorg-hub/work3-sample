@@ -1,0 +1,60 @@
+.section_fizz {}
+
+.section_fizz__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 50vh);
+
+	@include bp ($point_3) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 30vh);
+	}
+}
+
+.section_fizz__item {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.section_fizz__item_mod--1 {
+	grid-column-start: span 2;
+
+	background-image: url(../images/fizz/fizz_1.jpg);
+}
+
+.section_fizz__item_mod--2 {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 3rem;
+
+	background-image: url(../images/fizz/fizz_2.jpg);
+}
+
+.section_fizz__item.section_fizz__item_mod--3 {
+	background-image: url(../images/fizz/fizz_3.jpg);
+}
+
+.section_fizz__item.section_fizz__item_mod--4 {
+	position: relative;
+
+	grid-column-start: span 2;
+
+	background-image: url(../images/fizz/fizz_4.jpg);
+}
+
+.section_fizz__link {
+	font-size: 2rem;
+	color: #fff;
+	transition: color .3s, text-shadow .3s;
+
+	@include bp ($point_6) {
+		font-size: 1.2rem;
+	}
+
+	&:hover {
+		color: rgb(184, 184, 184);
+		text-shadow: 0 0 4px #000;
+	}
+}

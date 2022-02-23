@@ -1,0 +1,51 @@
+- 
+	let icons = [
+		{
+			name: 'facebook',
+			href: 'https://www.facebook.com/'
+		},
+		{
+			name: 'instagram',
+			href: 'https://www.instagram.com'
+		},
+		{
+			name: 'vimeo',
+			href: 'https://www.vimeo.com'
+		},
+		{
+			name: 'youtube',
+			href: 'https://www.youtube.com/'
+		}
+	]
+
+
+mixin section_hbo 
+	section.section_hbo
+		.section_hbo__grid 
+			.section_hbo__item.section_hbo__item_mod--1
+				.section_hbo__inner 
+					p.section_hbo__text Nimblebot continues to impress and wow us with their dedicated attitude and over-the-top delivery, everytime.
+					.section_hbo__who_inner
+						span.section_hbo__autor Usman Ahmed
+						span.section_hbo__policy Head of Global Policy
+						a.section_hbo__link(href="#") 
+							+picture({
+							typeJpeg: false,
+							png: true,
+							media: 1024,
+							is2x: false,
+							contain: false,
+							class: 'section_hbo__icon',
+							img: `icons/pay`,
+							img_mob: `icons/pay`
+							})
+			.section_hbo__item.section_hbo__item_mod--2 
+				a.link__video(href="#") 
+				a.section_hbo__link_fizz.section__title__link(href="#") 
+					h2.section_fizz__title.section__title HBO + NCTA | ANIMATION
+			.section_hbo__item.section_hbo__item_mod--3
+					ul.social_list
+						each item in icons
+							li.social_list__item 
+								a.social_list__link(href=item.href) 
+									+icon(item.name, 'section_hbo__icon')

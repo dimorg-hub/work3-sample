@@ -1,0 +1,42 @@
+.section_motion {
+	position: relative;
+
+	height: 80vh;
+
+	background-image: url(../images/section_mit_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@include bp ($point_3) {
+		height: 50vh;
+	}
+
+	@include bp ($point_5) {
+		height: 40vh;
+	}
+}
+
+.section_motion__nimble {
+	display: inline-flex;
+	justify-content: space-between;
+	width: 66.666%;
+	padding: 3.4rem 4.4rem;
+
+	font-size: 2.5rem;
+	color: #fff;
+
+	background-color: #F6285B;
+
+	@include bp ($point_3) {
+		padding: 1.4rem;
+
+		font-size: 1.2rem;
+	}
+
+	@include bp ($point_5) {
+		padding: 1rem 1rem;
+
+		font-size: 1rem;
+	}
+}

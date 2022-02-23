@@ -1,0 +1,33 @@
+.footer {
+	padding: 6.5rem 7.5rem 7.5rem;
+
+	@include bp ($point_3) {
+		padding: 2.4rem;
+	}
+}
+
+.footer__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include bp ($point_3) {
+		flex-wrap: wrap;
+	}
+}
+
+.footer__link {
+	display: block;
+
+	border-bottom: 2px solid transparent;
+
+	transition: border-bottom .3s;
+
+	@include bp ($point_3) {
+		padding: 0.8rem;
+	}
+
+	&:hover {
+		border-bottom: 2px solid rgb(109, 109, 109);
+	}
+}

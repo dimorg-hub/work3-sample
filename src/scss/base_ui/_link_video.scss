@@ -1,0 +1,44 @@
+%link__video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	display: block;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		width: 0;
+		height: 0;
+
+		border: 0 solid transparent;
+		border-bottom-width: 6rem;
+		border-top-width: 6rem;
+		border-left: 7.6rem solid #fff;
+
+		transform: translate(-50%, -50%);
+		transition: border-left .3s;
+
+		@include bp ($point_3) {
+			border-bottom-width: 3rem;
+			border-top-width: 3rem;
+			border-left: 3.8rem solid #fff;
+		}
+
+		@include bp ($point_3) {
+			border-bottom-width: 2rem;
+			border-top-width: 2rem;
+			border-left: 2.6rem solid #fff;
+		}
+	}
+
+
+	&:hover::after {
+		border-left-color: rgb(74, 143, 247);
+	}
+}

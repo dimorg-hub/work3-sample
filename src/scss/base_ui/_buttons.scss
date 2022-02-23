@@ -1,0 +1,43 @@
+// .btn_base {
+// 	@extend %blue_btn_1;
+// 	@extend %btn_size_1;
+// }
+
+%header__btn {
+	display: block;
+	min-width: 35rem;
+	height: 100%;
+	padding: 0px 6.4rem 0 7.4rem;
+
+	font-size: 2rem;
+	color: #fff;
+	text-align: center;
+
+	border: none;
+	background-color: #223A59;
+	cursor: pointer;
+	transition: color .3s, background-color .3s;
+
+	@include bp ($point_4) {
+		min-width: 20rem;
+		padding: 0px 1rem 0 1rem;
+
+		font-size: 1.4rem;
+	}
+
+	@include bp ($point_6) {
+		min-width: 10rem;
+		font-size: 1rem;
+	}
+
+	&:hover {
+		color: rgb(28, 16, 199);
+		background-color: #8eb9f1;
+	}
+
+	&:active {
+		transform: translateY(2px);
+		color: rgb(255, 0, 0);
+		background-color: #1b204e;
+	}
+}

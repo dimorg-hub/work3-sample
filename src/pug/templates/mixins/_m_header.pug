@@ -1,0 +1,22 @@
+-let list = ['WORK', 'INFO']
+
+mixin header
+	header.header
+		.header__inner
+			a.header_logo__link(href="#") 
+				+picture({
+				typeJpeg: false,
+				png: true,
+				media: 1024,
+				is2x: false,
+				contain: false,
+				class: 'logo',
+				img: `icons/logo`,
+				img_mob: `icons/logo`
+				})
+			nav.header__nav 
+				ul.header__nav__list 
+					each item in list
+						li.header__nav__item
+							a.header__link(href="#")= item
+		button.header__btn(type="button") SCHEDULE A CALL 

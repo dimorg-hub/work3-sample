@@ -1,0 +1,151 @@
+.section_hbo {
+	overflow: hidden;
+}
+
+.section_hbo__grid {
+	display: grid;
+
+	grid-template-rows: repeat(3, 30vh);
+	grid-template-columns: repeat(3, 1fr);
+
+	@include bp ($point_3) {
+		grid-template-rows: repeat(2, 30vh);
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include bp ($point_6) {
+		grid-template-rows: repeat(3, 30vh);
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.section_hbo__item {
+	padding: 5.6rem 1rem 4.6rem 5.4rem;
+
+	@include bp ($point_3) {
+		padding: 1rem;
+	}
+}
+
+.section_hbo__item_mod--1 {
+	grid-row-start: span 2;
+
+	background-color: #F6285B;
+
+	@include bp ($point_3) {
+		grid-row-start: span 1;
+		grid-column-start: span 1;
+	}
+}
+
+.section_hbo__item_mod--2 {
+	position: relative;
+
+	grid-row-start: span 3;
+	grid-column-start: span 2;
+
+
+	background-image: url(../images/hbo_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: cover;
+
+	@include bp ($point_3) {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+
+	@include bp ($point_6) {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+}
+
+.link__video {
+	@extend %link__video;
+}
+
+.section_hbo__item_mod--3 {
+	display: flex;
+	align-items: flex-end;
+
+	background-color: #223A59;
+
+	@include bp ($point_3) {
+		justify-content: center;
+		align-items: center;
+	}
+
+	@include bp ($point_6) {
+		grid-row-start: 3;
+		grid-row-end: 4;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+}
+
+.social_list {
+	display: flex;
+}
+
+.social_list__item {
+	&:not(:last-child) {
+		margin-right: 2.8rem;
+	}
+}
+
+.section_hbo__icon {
+	width: 3rem;
+	height: 3rem;
+
+	fill: #fff;
+	transition: fill .3s;
+
+	&:hover {
+		fill: rgb(160, 160, 160);
+	}
+}
+
+.section_hbo__inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+
+	font-size: 1.8rem;
+	color: #fff;
+
+	@include bp ($point_3) {
+		font-size: 1.2rem;
+	}
+}
+
+.section_hbo__text {
+	max-width: 36rem;
+
+	font-size: 2.5rem;
+
+	@include bp ($point_3) {
+		max-width: 100%;
+
+		font-size: 1.6rem;
+		text-align: justify;
+	}
+
+	@include bp ($point_5) {
+		margin-bottom: 1rem;
+	}
+}
+
+.section_hbo__autor {
+	display: block;
+}
+
+.section_hbo__policy {
+	display: block;
+	margin-bottom: 2rem;
+}
